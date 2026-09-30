@@ -4,22 +4,22 @@
     {
       "name": "Linkq.group",
       "status": "normal",
-      "five_hour_usage": 90,
-      "weekly_usage": 100,
+      "five_hour_remaining": 90,
+      "weekly_remaining": 100,
       "last_check": "21:40"
     },
     {
       "name": "Linkq_group1",
       "status": "normal",
-      "five_hour_usage": 100,
-      "weekly_usage": 100,
+      "five_hour_remaining": 100,
+      "weekly_remaining": 100,
       "last_check": "21:40"
     },
     {
       "name": "Linkq_group2",
       "status": "degraded",
-      "five_hour_usage": 100,
-      "weekly_usage": 100,
+      "five_hour_remaining": 100,
+      "weekly_remaining": 100,
       "last_check": "21:40"
     }
   ]
