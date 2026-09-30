@@ -1,0 +1,26 @@
+{
+  "updated": "2026-09-30 22:00",
+  "accounts": [
+    {
+      "name": "Linkq.group",
+      "status": "normal",
+      "five_hour_usage": 100,
+      "weekly_usage": 100,
+      "last_check": "21:40"
+    },
+    {
+      "name": "Linkq_group1",
+      "status": "normal",
+      "five_hour_usage": 100,
+      "weekly_usage": 100,
+      "last_check": "21:40"
+    },
+    {
+      "name": "Linkq_group2",
+      "status": "degraded",
+      "five_hour_usage": 100,
+      "weekly_usage": 100,
+      "last_check": "21:40"
+    }
+  ]
+}
