@@ -3,18 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>GPT Status</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 24px;
+        }
+
+        .header {
+            margin-bottom: 32px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .header p {
+            margin-top: 8px;
+            color: #6b7280;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e7eb;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .account-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .online {
+            background: #22c55e;
+        }
+
+        .offline {
+            background: #ef4444;
+        }
+
+        .warning {
+            background: #f59e0b;
+        }
+
+        .info {
+            margin-top: 16px;
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer {
+            margin-top: 36px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>ChatGPT Account Monitor</h1>
 
-    <p>🟢 GPT-01：Online</p>
-    <p>🟢 GPT-02：Online</p>
-    <p>🔴 GPT-03：Offline</p>
+<div class="container">
 
-    <hr>
+    <div class="header">
+        <h1>ChatGPT Account Monitor</h1>
+        <p>GPT 账号运行状态面板</p>
+    </div>
 
-    <p>Last updated: 2026-09-30</p>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-header">
+                <div class="account-name">GPT-01</div>
+            </div>
+
+            <div class="status">
+                <div class="dot online"></div>
+                Online
+            </div>
+
+            <div class="info">
+                Plan: Plus<br>
+                Last Check: 21:40<br>
+                Current Task: Idle
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">
+                <div class="account-name">GPT-02</div>
+            </div>
+
+            <div class="status">
+                <div class="dot online"></div>
+                Online
+            </div>
+
+            <div class="info">
+                Plan: Plus<br>
+                Last Check: 21:38<br>
+                Current Task: Research
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">
+                <div class="account-name">GPT-03</div>
+            </div>
+
+            <div class="status">
+                <div class="dot offline"></div>
+                Offline
+            </div>
+
+            <div class="info">
+                Plan: Free<br>
+                Last Check: 19:22<br>
+                Current Task: Login Required
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        Last updated: 2026-09-30 21:45
+    </div>
+
+</div>
+
 </body>
 </html>
