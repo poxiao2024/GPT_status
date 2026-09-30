@@ -123,6 +123,48 @@
     </div>
 
 </div>
+<script>
+    fetch("status.json")
+        .then(response => response.json())
+        .then(data => {
 
+            const grid = document.getElementById("account-grid");
+
+            data.accounts.forEach(account => {
+
+                const card = document.createElement("div");
+                card.className = "card";
+
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="account-name">${account.name}</div>
+                    </div>
+
+                    <div class="status">
+                        <div class="dot ${account.status}"></div>
+                        ${account.status === "normal" ? "Normal" : "Degraded"}
+                    </div>
+
+                    <div class="info">
+                        5-hour usage: ${account.five_hour_usage}%<br>
+                        Weekly usage: ${account.weekly_usage}%<br>
+                        Last Check: ${account.last_check}
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+
+            document.getElementById("footer").textContent =
+                "Last updated: " + data.updated;
+        })
+
+        .catch(error => {
+            console.error("Failed to load status.json:", error);
+
+            document.getElementById("footer").textContent =
+                "Failed to load status data";
+        });
+</script>
 </body>
 </html>
