@@ -173,10 +173,40 @@
                     </div>
 
                     <div class="info">
-                        5-hour usage: ${account.five_hour_usage}%<br>
-                        Weekly usage: ${account.weekly_usage}%<br>
+
+                        <div class="usage-item">
+                            <div class="usage-label">
+                                <span>5-hour usage</span>
+                                <span>${account.five_hour_usage}%</span>
+                            </div>
+                    
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     style="width: ${account.five_hour_usage}%;">
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="usage-item">
+                            <div class="usage-label">
+                                <span>Weekly usage</span>
+                                <span>${account.weekly_usage}%</span>
+                            </div>
+                    
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     style="width: ${account.weekly_usage}%;">
+                                </div>
+                            </div>
+                    </div>
+                
+                
+                    <div style="margin-top: 18px;">
                         Last Check: ${account.last_check}
                     </div>
+                
+                </div>
                 `;
 
                 grid.appendChild(card);
